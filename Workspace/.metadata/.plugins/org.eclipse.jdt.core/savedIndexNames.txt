@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+F:\Trainings\NSE IT\Workspace\.metadata\.plugins\org.eclipse.jdt.core
+2380175872.index

@@ -95,5 +95,68 @@ dataType variableName = value;
 
 https://heartbleed.com/
 
-# To DO 
+
+# Current Situation
+
+I am giving you time till 2:50pm to try out the code I have written so far today. You can check that out in `Basics.java` file. Practice that in your own STS, and if you have any doubts, feel free to ask me.
+
+# Jshell
+
+- It's REPL Read-Eval-Print-Loop
+
+
+# Operators
+
+- Operators are special symbols that perform specific operations on one, two, or three operands, and then return a result.
+
+
+- Arithmetic
+- Assignment Operators
+- Comparison Operators
+- Logical
+- Bitwise Operator
+- Ternary Operator
+
+1+2    - unary 
++1+2    - unary + binary plus
++1      - unary plus
+-1      - unary minus
+
+- Expression
+- Statement
+- Blocks ({})
+
+## Expression Example
+```java
+int a;
+System.out.println(a=3);
+```
+
+- multiple expressions
+
+```java
+System.out.println(1+3+(2*6/(1+4)));
+```
+
+
+# Control Statements
+
+Computer executes instructions sequentially   
+Control Statements alter the sequence of execution of code
+
+- Conditional Statements
+    - if..then..else
+    - switch..case
+- Loops
+- Jump Statement
+- Method calls
+
+## if..then..else
+
+```java
+System.out.println()
+```
+
+# To Do
 - Does Java Still only considers signed 
+- Bitwise operator example

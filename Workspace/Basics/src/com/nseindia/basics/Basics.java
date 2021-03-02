@@ -1,5 +1,14 @@
 package com.nseindia.basics;
 
+/* This project contains examples and notes for
+ * variables
+ * data types
+ * conversion and casting
+ */
+
+/*
+ * for operators look back at Day2.md
+ */
 public class Basics {
 
 	public static void main(String[] args) {
@@ -63,7 +72,7 @@ public class Basics {
 		// Int		4 Bytes
 		// Long		8 Bytes
 		// Float		4 Bytes
-		// Double	8 Bytes
+		// Double	8 Bytes  
 		// Char		2 Bytes
 		// boolean	Unknown Bytes
 		
@@ -73,6 +82,7 @@ public class Basics {
 		// Short 2^16
 		// Int 2^32
 		// Long 2^64
+			// 10^45;
 		
 		// Two types of Numeric Values
 		// Signed (-128 to -1, 0 to 127) = 256
@@ -127,6 +137,8 @@ public class Basics {
 						+ "Max Value = " + Character.MAX_VALUE
 				);
 		
+		System.out.println(101.3232342342432342342342343223423443);
+		
 		String varКитайский = "I successfully printed Russian variable";
 		
 		System.out.println(varКитайский);
@@ -153,16 +165,46 @@ public class Basics {
 		
 		System.out.println("------- Trying Overflow and Underflow with float and Double------");
 		
-		System.out.println("Overflow Int"); //Overflow
+		System.out.println("Overflow Double"); //Overflow
 		System.out.println("Max value is " + Double.MAX_VALUE); //Overflow
 		System.out.println(Double.MAX_VALUE+1); //Overflow
-		System.out.println("Underflow Int"); // Underflow
+		System.out.println("Underflow Double"); // Underflow
 		System.out.println("Min value is " + Double.MIN_VALUE); //Overflow
-		System.out.println(Double.MIN_VALUE-1); // Underflow
+			System.out.println(Double.MIN_VALUE-1); // Underflow
 		
 		// Double doesn't have the same underflows and overflows as INT
 		
-		// --------Casting and Conversions-------
+		// --------Implicit Conversions and Casting-------
+		
+//		Strings, Double, and Int enjoy favoritism in Java
+		
+		System.out.println("-------Output for COnversions and casting--------");
+		
+		int convInt = 3;
+		
+		System.out.println("convInt + 1 is " + convInt +1); 
+		System.out.println(convInt +1 + " convInt + 1 is " + 5 + 3); 
+		
+		System.out.println(Byte.MAX_VALUE+1); //Overflow with byte+int
+		
+		// int + short/long/byte = int
+		// double + int = double
+		// String + double + int = String
+		
+		System.out.println((int)(3.3));
+		System.out.println((int)(3.9));
+		// Offline Work: Try out compatible Castings
+		
+		 System.out.println((char)(60+5));
+//		3.5,4.5,9999.99 what is the datatype i should use for values like this?
+//		 double
+//		 System.out.println(14_13_12_11_73_35_18_53_123.11);
+//		 BigDecimal
+		 
+		 
+		 System.out.println((char)(int)60+5);
+		 
+		 System.out.println((char)((int)60+5));
 	}
 
 }

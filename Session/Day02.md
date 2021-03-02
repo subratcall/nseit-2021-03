@@ -72,3 +72,28 @@ dataType variableName = value;
 
 - Notes present in Basics Project
 - Basics.Java
+
+# Regardings Names
+
+- Naming Convention
+    - camelCase
+    - PascalCase
+    - snake_case
+- Nomenclature
+    - var(DataType)
+
+# Floating Point Numbers
+
+- https://en.wikipedia.org/wiki/IEEE_754
+- https://babbage.cs.qc.cuny.edu/IEEE-754.old/Decimal.html
+
+# Overflow and Underflow
+
+[0,1,2,3,4,5,6,7]
+
+# Other References
+
+https://heartbleed.com/
+
+# To DO 
+- Does Java Still only considers signed 

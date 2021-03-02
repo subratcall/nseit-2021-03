@@ -48,10 +48,6 @@
 
 # ECMAScript
 
-# To DO at the end
-
-- Jargon Busting
-- Is Java a Procedural Language?
 
 
 
@@ -123,7 +119,7 @@
 
 package name: com.nseindia.hello
 
-# Naming Conventions
+# Naming Conventions(Best Practices)
 
 - Module name is lowercase
 - package is lowercase
@@ -154,3 +150,9 @@ you will get the same options back in this setting
 
 
 - MVC
+
+
+# To DO at the end
+
+- Jargon Busting
+- Is Java a Procedural Language?

@@ -151,12 +151,59 @@ Control Statements alter the sequence of execution of code
 - Jump Statement
 - Method calls
 
+# Conditional Statements
+
 ## if..then..else
 
 ```java
-System.out.println()
+if (condition/expression){
+
+} else if (condition/expression) {
+
+} else if(conditions/expression) {
+
+} else {
+
+
+}
+
+```
+
+# Code Examples
+
+- https://www.programiz.com/java-programming/examples
+- WAP that checks if a given variable which is used to denote a year is a leap year
+- Create two variables to input `name` and `gender` of a person, and then depending on the gender print the name with proper prefix(Mr/Miss). 
+
+
+# For Loop
+
+- Syntax
+
+```java
+for (definition;condition;expression){
+    // code
+}
 ```
 
 # To Do
 - Does Java Still only considers signed 
 - Bitwise operator example
+- Switch
+- Do While
+- While
+
+```java
+System.out.println(gender);
+System.out.println(gender.toLowerCase());
+System.out.println(gender.toLowerCase() == "male");
+System.out.println(gender == "Male");
+```
+
+# Day 3
+
+- Do while
+- While
+- Arrays
+- Switch
+- Classes and Object/Objected Oriented Programming

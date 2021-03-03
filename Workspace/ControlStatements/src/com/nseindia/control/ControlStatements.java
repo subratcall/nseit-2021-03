@@ -1,7 +1,5 @@
 package com.nseindia.control;
 
-import java.util.Iterator;
-
 /*
  * This project will contain examples and notes related to
  * conditional statements
@@ -31,12 +29,12 @@ public class ControlStatements {
 		System.out.println("---------Second Example-------");
 		
 		String name = "John Doe";
-		String gender = "Female1";
+		String gender = "male";
 		
 //		This is open for volunteering
 //		Good opportunity
 		
-//		System.out.println(gender);
+//		System.out.println(gender =="male");
 //		System.out.println(gender.toLowerCase());
 //		System.out.println(gender.toLowerCase() == "male");
 //		System.out.println(gender.toLowerCase().equals("male"));

@@ -91,7 +91,8 @@ BiggestFactor = Number/2
 
 2,3,,5,,7,,9,,11
 
-# To Do
+# OPLs(Open Point Lists)
 
 - Memory Allocation of everything at once
 - https://www.geeksforgeeks.org/memory-layout-of-c-program/
+- Multi Dimensional Arrays

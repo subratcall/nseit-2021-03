@@ -48,6 +48,7 @@ public class Main {
 	
 	static void testMethod() {
 		System.out.println("Testing the method out");
+	
 	}
 	
 	static void readInput() {

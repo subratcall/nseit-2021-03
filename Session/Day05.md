@@ -193,7 +193,12 @@ public class SortStdById implements Comparator<Student> {
     - int,String,Custom Object
     - This should be used when the search is based on a single attribute
 - Set
+    - Unique Values
 - Queue
+    - FIFO
+
+- Stack
+    - LIFO
 
 - List of user ids
     - 1
@@ -213,3 +218,10 @@ public class SortStdById implements Comparator<Student> {
     - Data is actually stored in a db
     - When you load the data from the db, then you put it inside a data structure
     
+# Dates
+
+- 1 - 7 Java
+- 8 - 11 Oracle Sql
+- 12 - 24 DevOps, Microservices, Spring Boot, Spring 
+- 25 -30 Linux
+- 31-35 < - write your projects

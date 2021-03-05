@@ -101,6 +101,7 @@ public class Grades implements StudentInterface{
 		} else {
 			Grade = "D";
 		}
+		
 	}
 
 	public String getGrade() {

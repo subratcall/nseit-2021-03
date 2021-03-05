@@ -189,6 +189,3 @@ interface InterfaceName{
     public double getProjectManagement();
     public double getTotal();
 }
-
-
-

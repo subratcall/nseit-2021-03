@@ -16,7 +16,7 @@ public class Main {
 		
 		
 		producer.start();
-		producer1.start();
+//		producer1.start();
 		
 		consumer.start();
 //		consumer1.start();

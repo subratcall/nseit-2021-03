@@ -19,7 +19,7 @@ public class Main {
 		producer1.start();
 		
 		consumer.start();
-		consumer1.start();
+//		consumer1.start();
 		
 		
 //		System.out.println(lyd);

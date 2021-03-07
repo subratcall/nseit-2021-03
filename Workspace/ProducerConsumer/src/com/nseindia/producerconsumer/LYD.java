@@ -35,7 +35,8 @@ class Consumer implements Runnable{
 	public void run() {
 //		
 		int counter =0;
-			while(!lyd.inputYears.isEmpty() ) {
+		while(!lyd.pFinished || !lyd.inputYears.isEmpty() ) {
+			if(!lyd.inputYears.isEmpty() ) {
 				counter++;
 				synchronized (lyd) {
 					int year = lyd.inputYears.remove(0); // state of the array is change
@@ -43,13 +44,12 @@ class Consumer implements Runnable{
 						lyd.output.add(year + " is a leap year");
 					} else {
 						lyd.output.add(year + " is not a leap year");
-					}
-					
+					}	
+					System.out.println(lyd);
 				}
-				
-				
-				System.out.println(lyd);
 			}
+		}
+			
 			
 		
 		System.out.println("Consumer terminated with " + counter + " hits");
@@ -72,8 +72,8 @@ class Producer implements Runnable{
 		for (int i=0; i<arr.length;i++) {
 			synchronized (lyd) {				
 				lyd.inputYears.add(arr[i]); // state of the list
+				System.out.println(lyd);			
 			}
-			System.out.println(lyd);			
 		}
 		System.out.println("Producer terminated");
 	}
@@ -81,7 +81,6 @@ class Producer implements Runnable{
 	public Producer(LYD lyd,int[] arr) {
 			this.lyd = lyd;
 			this.arr=arr;
-			
 	}
 	
 }

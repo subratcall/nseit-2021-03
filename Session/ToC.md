@@ -91,8 +91,8 @@
         - JAXB 
         - JSON
     - Streams API
-        - Lambda Expression 
-        - Normal Streams 
+        - Lambda Expression (C)
+        - Normal Streams (C)
         - Streams API Vs Collections 
-        - Parallel Streams 
-        - Filter, Map, Reduce methods 
+        - Parallel Streams (C)
+        - Filter, Map, Reduce methods  (C)

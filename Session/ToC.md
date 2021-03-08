@@ -33,7 +33,7 @@
         - Array Declaration (C)
         - Types of Arrays (C)
         - Memory Allocation in an Array (C)
-        - Strings and Immutability of Strings 
+        - Strings and Immutability of Strings (PC)
         - Memory Allocation in a String (C)
         - StringBuffer and StringBuilder
     - Object Oriented Programming
@@ -50,7 +50,7 @@
     - Exception and File Handling
         - Packages 
         - Regular Expressions 
-        - Exception Handling 
+        - Exception Handling (PC)
         - File I/O 
         - Streams I/O
     - Collections

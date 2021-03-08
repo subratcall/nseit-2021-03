@@ -39,6 +39,9 @@ class Consumer implements Runnable{
 			if(!lyd.inputYears.isEmpty() ) {
 				counter++;
 				synchronized (lyd) {
+					if (lyd.inputYears.isEmpty()) {
+						continue;
+					}
 					int year = lyd.inputYears.remove(0); // state of the array is change
 					if (year % 4 == 0) {
 						lyd.output.add(year + " is a leap year");
@@ -49,7 +52,7 @@ class Consumer implements Runnable{
 				}
 			}
 			try {
-				Thread.sleep(100);
+				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -89,12 +92,12 @@ class Producer implements Runnable{
 			if (scan.hasNext()) {
 				i = scan.nextInt();
 				synchronized (lyd) {		
-					if (i==0) {						
+					if (i==0) {	
+						lyd.pFinished=true;
 						break;
 					}
 					lyd.inputYears.add(i); // state of the list
 					System.out.println(lyd);		
-					
 				}
 			}
 			try {

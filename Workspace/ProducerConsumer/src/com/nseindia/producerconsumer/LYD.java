@@ -38,8 +38,13 @@ class Consumer implements Runnable{
 		while(!lyd.pFinished || !lyd.inputYears.isEmpty() ) {
 			if(!lyd.inputYears.isEmpty() ) {
 				counter++;
+//				lyd.inputYears a single element, let's say 300
+				int year;
 				synchronized (lyd) {
-					int year = lyd.inputYears.remove(0); // state of the array is change
+					if (lyd.inputYears.isEmpty()) {
+						return;
+					}
+					year = lyd.inputYears.remove(0); // state of the array is change
 					if (year % 4 == 0) {
 						lyd.output.add(year + " is a leap year");
 					} else {
@@ -72,8 +77,16 @@ class Producer implements Runnable{
 		for (int i=0; i<arr.length;i++) {
 			synchronized (lyd) {				
 				lyd.inputYears.add(arr[i]); // state of the list
-				System.out.println(lyd);			
+				System.out.println(lyd);	
 			}
+			// Following are not the literal example of how println works
+			// Just came up with them for explanation
+			// evalutate value of lyd
+			// set it somewhere
+			// setup resources for print
+			// print a line
+			// close connections
+			// release
 		}
 		System.out.println("Producer terminated");
 	}

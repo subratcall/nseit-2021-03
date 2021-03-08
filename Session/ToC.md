@@ -68,11 +68,11 @@
         - Multi-Threading (C)
         - Synchronization (PC)
         - Thread Safe (C)
-        - Locks 
+        - Locks (C)
         - BlockingQueue (ArrayBlockingQueue, LinkedBlockingQueue) 
-        - AtomicInteger 
-        - ExecutorFramework 
-        - Semaphore 
+        - AtomicInteger (PC)
+        - ExecutorFramework (C)
+        - Semaphore (C)
         - CountdownLatch 
         - Fork-Join Framework 
         - CyclicBarrier 
@@ -96,4 +96,3 @@
         - Streams API Vs Collections 
         - Parallel Streams 
         - Filter, Map, Reduce methods 
-        - Optional

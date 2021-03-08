@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 /*
- * LYD is leap year detector
+ * LYD is leap year detector which is Thread Safe
  */
 public class LYD {
 	List<Integer> inputYears = new ArrayList<Integer>();
@@ -110,6 +110,7 @@ class Producer implements Runnable{
 					lyd.pFinished=true;
 					break;
 				}
+				
 				lyd.add(i);
 				
 			}

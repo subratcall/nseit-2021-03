@@ -3,6 +3,7 @@ package com.nseindia.locks;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
 
 /*
@@ -19,10 +20,15 @@ public class LYD {
 
 	public void add(Integer i) {
 		System.out.println(Thread.currentThread().getName() + " waits for the lock");
-		lock.lock();
-		System.out.println(Thread.currentThread().getName() + " gets the lock");
+		//t1
+		//t2
+		//t3
+		//t4
 		
 		try {
+			// t1 with different value of a reference object than t2
+			lock.lock(); // still t2 is blocked
+			System.out.println(Thread.currentThread().getName() + " gets the lock");
 			this.inputYears.add(i);
 			System.out.println(this.inputYears);
 		} finally {
@@ -30,15 +36,19 @@ public class LYD {
 			System.out.println(Thread.currentThread().getName() + " releases the lock");
 		}
 		
+//			
+//			lock.unlock();
+//			System.out.println(Thread.currentThread().getName() + " releases the lock");
+	
 		
 	}
 
 	public void test() {
-		System.out.println(Thread.currentThread().getName() + " waits for the lock");
-		lock.lock();
-		System.out.println(Thread.currentThread().getName() + " gets the lock");
 		
 		try {
+			System.out.println(Thread.currentThread().getName() + " waits for the lock");
+			lock.lock();
+			System.out.println(Thread.currentThread().getName() + " gets the lock");
 			if (this.inputYears.isEmpty()) {
 				return;
 			}
@@ -60,6 +70,7 @@ public class LYD {
 		}
 		
 	}
+	
 
 	// ------ till here
 

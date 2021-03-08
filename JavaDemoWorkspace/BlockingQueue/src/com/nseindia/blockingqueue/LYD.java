@@ -6,13 +6,19 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.ArrayBlockingQueue;
+// Add Synchronized
 
 /*
  * LYD is leap year detector
  */
 public class LYD {
+	// Queue is a FIFO
+	// Excellent Data Structure to be used on buffers
 	ArrayBlockingQueue<Integer> inputYears = new ArrayBlockingQueue<Integer>(6);
 	List<String> output = Collections.synchronizedList(new ArrayList<String>());
+//	List<String> output = new SynchronizedList<String>(new ArrayList<String>());
+//	make  the above statement work by using the proper import statement.
+
 
 	boolean pFinished = false;
 //	ReentrantLock lock = new ReentrantLock();
@@ -24,18 +30,21 @@ public class LYD {
 //		lock.lock();
 //		System.out.println(Thread.currentThread().getName() + " gets the lock");
 
-		try {
+
 			try {
+				// t1
+				// t2
+				// producer blocked because 6 elements in an array
 				this.inputYears.put(i);
+				// once we fill the buffer completely
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println(this.inputYears);
-		} finally {
-//			lock.unlock();
-//			System.out.println(Thread.currentThread().getName() + " releases the lock");
-		}
+			//t1
+			//t2
+			System.out.println(this);
+		
 
 	}
 
@@ -43,11 +52,13 @@ public class LYD {
 //		System.out.println(Thread.currentThread().getName() + " waits for the lock");
 //		lock.lock();
 //		System.out.println(Thread.currentThread().getName() + " gets the lock");
-		int year;
+		Integer year;
 
-		if (!this.inputYears.isEmpty()) {
-			year = this.inputYears.remove(); // state of the array is change
+			year = this.inputYears.poll(); // state of the array is change
 
+			if (year==null) {
+				return;
+			}
 			if (year % 4 == 0) {
 				this.output.add(year + " is a leap year");
 			} else {
@@ -55,7 +66,7 @@ public class LYD {
 			}
 
 			System.out.println(this);
-		}
+		
 	}
 
 	// ------ till here
@@ -121,7 +132,7 @@ class Producer implements Runnable {
 	public void run() {
 		for (int j = 0; j < arr.length; j++) {
 			lyd.add(arr[j]); // state of the list
-			System.out.println(lyd);
+//			System.out.println(lyd);
 		}
 
 		int i;

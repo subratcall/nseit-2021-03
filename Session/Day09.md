@@ -134,4 +134,7 @@ To commit the finished container to an image type the following(this can be powe
 
 ```
 docker commit odb odbimage
+docker image ls
 ```
+
+Last command to verify
